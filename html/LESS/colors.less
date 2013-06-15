@@ -1,0 +1,363 @@
+/*
+ * BZ Studio v1.0 - Colors & Patterns Stylesheet
+ *
+ * This file is part of BZ Studio, a HTML template build for sale at ThemeForest.
+ * For questions, suggestions or support request, please mail me at maimairel@yahoo.com
+ *
+ * Development Started:
+ * February 13, 2013
+ *
+ */
+
+/* BROWN */
+.colorScheme(bz-brown, #f4f1e1, #303030, #629a9c, #ffffff, #303030, #9b4149, #ffffff, #444444, #9b4149);
+
+/* GREEN */
+.colorScheme(bz-green, #82af95, #ffffff, #524532, #ffffff, #303030, #524532, #ffe8c0, #ffe8c0, #ffe8c0);
+
+/* BLACK */
+.colorScheme(bz-black, #2e2e2e, #eaeaea, #ce6640, #ffffff, #999999, #ce6640, #e0e0e0, #e0e0e0, #b0c770);
+
+/* WHITE */
+.colorScheme(bz-white, #ffffff, #333333, #2d3f51, #ffffff, #303030, #9b5157, #ffffff, #444444, #9b5157);
+
+/* YELLOW */
+.colorScheme(bz-yellow, #d3a445, #f6f6f6, #2d5252, #ffffff, #303030, #2d5252, #eeeeee, #eeeeee, #a4271e);
+
+// Vintage Mixin
+.colorScheme(@name, 
+    @mainBackgroundColor, @mainTextColor, 
+    @primaryBackgroundColor, @primaryTextColor, @primaryBorderColor, 
+    @secondaryBackgroundColor, @secondaryTextColor, @secondaryBorderColor, 
+    @highlightColor) {
+
+    .separator(@color) when (lightness(@color) >= 50%) {
+        border-bottom-color: darken(@color, 40%);
+    }
+    .separator(@color) when (lightness(@color) < 50%) {
+        border-bottom-color: lighten(@color, 25%);
+    }
+
+    .grungeBackground(@color) when (lightness(@color) >= 75%) {
+        background-image: url('../img/grunge/bg100.png');
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+            background-image: url('../img/grunge/@2x/bg100.png'); 
+            background-size: 400px 300px;
+        }
+    }
+    .grungeBackground(@color) when (lightness(@color) < 75%) {
+        background-image: url('../img/grunge/wg100.png');
+        @media
+        only screen and (-webkit-min-device-pixel-ratio: 2),
+        only screen and (   min--moz-device-pixel-ratio: 2),
+        only screen and (     -o-min-device-pixel-ratio: 2/1),
+        only screen and (        min-device-pixel-ratio: 2),
+        only screen and (                min-resolution: 192dpi),
+        only screen and (                min-resolution: 2dppx) {
+           background-image: url('../img/grunge/@2x/wg100.png');
+           background-size: 400px 300px;
+        }
+    }
+
+    .window-loaded .section-wrap.@{name} {
+        .section-headline h1, 
+        .skill .bar .inner, 
+        .pricing-table-wrap .pricing-table .header, 
+        .pricing-table-wrap .pricing-table .body, 
+        .pricing-table-wrap .pricing-table .signup, 
+        .portfolio .filter ul li.active a, 
+        .portfolio .filter .active-label {
+            .grungeBackground(@primaryBackgroundColor);
+        }
+
+        .gmap-wrapper .gmap-title span {
+            .grungeBackground(@primaryBorderColor);
+        }
+
+        .btn {
+            .grungeBackground(@secondaryBackgroundColor);
+        }
+    }
+
+    .section-wrap.@{name} {
+        color: @mainTextColor;
+        background-color: @mainBackgroundColor;
+        
+        a, h1, h2, h3, h4, h5, h6, .highlight {
+            color: @highlightColor;
+        }
+
+        ::-webkit-input-placeholder {
+            color: @mainTextColor;
+        }
+        :-moz-placeholder {
+            color: @mainTextColor;
+        }
+        ::-moz-placeholder {
+            color: @mainTextColor;
+        }
+        :-ms-input-placeholder {
+            color: @mainTextColor;
+        }
+        
+        .section-headline {
+            .headline-ribbon {
+                &:before, &:after {
+                    border-color: darken(@primaryBackgroundColor, 4%);
+                }
+            }
+
+            h1 {
+                background-color: @primaryBackgroundColor;
+                color: @primaryTextColor;
+
+                &:after {
+                    border-top-color: darken(@primaryBackgroundColor, 25%);
+                    border-left-color: darken(@primaryBackgroundColor, 25%);
+                }
+
+                &:before {
+                    border-bottom-color: darken(@primaryBackgroundColor, 25%);
+                    border-right-color: darken(@primaryBackgroundColor, 25%);
+                }
+
+                span {
+                    text-shadow: 3px 3px darken(@primaryBackgroundColor, 15%);
+                }
+                
+                @media only screen and (-webkit-min-device-pixel-ratio: 0) {
+                    span {
+                    	text-shadow: @primaryTextColor -6px -6px, darken(@primaryBackgroundColor, 15%) -3px -3px;
+                	}
+                }   
+            }
+
+            .headline-separator {
+                color: @primaryBorderColor;
+                &:after, &:before {
+                    border-color: @primaryBorderColor;
+                }
+            }
+        }
+        
+        .section-story {
+            h2 {
+                color: @mainTextColor;
+            }
+        }
+        
+        .section-subheadline {
+            .headline-text {
+                color: @highlightColor;
+                
+                &:after, &:before {
+                    background-color: @highlightColor;
+                }
+                &:after {
+                    -moz-box-shadow: 0 .2em 0 @highlightColor, 0 -.2em 0 @highlightColor, -30px 0 0 @highlightColor;
+                    box-shadow: 0 .2em 0 @highlightColor, 0 -.2em 0 @highlightColor, -30px 0 0 @highlightColor;
+                }
+                &:before {
+                    -moz-box-shadow: 0 .2em 0 @highlightColor, 0 -.2em 0 @highlightColor, 30px 0 0 @highlightColor;
+                    box-shadow: 0 .2em 0 @highlightColor, 0 -.2em 0 @highlightColor, 30px 0 0 @highlightColor;
+                }
+            }
+            
+            .headline-text-small {
+                color: @mainTextColor;
+            }
+        }
+
+        .section-inner .separator {
+            .separator(@mainBackgroundColor);
+        }
+
+        .contact-heading {
+            .line {
+                color: @mainTextColor;
+            }
+            .subheading {
+                color: @mainTextColor;
+                border-color: @primaryBorderColor;
+                span {
+                    border-color: @primaryBorderColor;
+                }
+            }
+        }
+
+        .portfolio {
+            .filter-wrap, .filter {
+                border-color: @primaryBorderColor;
+            }
+
+            .filter {
+                ul {
+                    background-color: @mainBackgroundColor;
+                }
+                ul li {
+                    a {
+                        color: @mainTextColor;
+                    }
+                    &.active {
+                        a {
+                            color: @primaryTextColor;
+                        }
+                        outline: 1px solid @primaryBackgroundColor;
+                        outline-offset: 1px;
+                        background-color: @primaryBackgroundColor;
+                    }
+                }
+                .active-label {
+                    color: @primaryTextColor;
+                    outline: 1px solid @primaryBackgroundColor;
+                    outline-offset: 1px;
+                    background-color: @primaryBackgroundColor;
+                }
+            }
+        }
+
+        .blog-sidebar {
+            .blog-search, 
+            .block .block-title {
+                border-color: @primaryBorderColor;
+            }
+
+            .block .block-list li a {
+                color: @mainTextColor;
+            }
+        }
+
+        .blog-posts {
+            .post .head .post-meta li a {
+                color: @mainTextColor;
+
+                &:hover {
+                    color: @highlightColor;
+                }
+            }
+
+            .post .read a:before {
+                border-color: @primaryBorderColor;
+            }
+
+            .post .read a:hover {
+                color: @mainTextColor;
+            }
+        }
+
+        .service .icon {
+            color: @secondaryTextColor;
+            background-color: @secondaryBackgroundColor;
+            border-color: @secondaryBorderColor;
+
+            &:after, &:before {
+                border-color: @secondaryBorderColor;
+            }
+        }
+
+        .team {
+            .column, .columns, .info {
+                border-bottom-color: @primaryBorderColor;
+            }
+
+            .photo .social-overlay ul li a:hover {
+                color: @highlightColor;
+            }
+        }
+
+        .skill .bar {
+            border-color: @primaryBorderColor;
+            
+            &:after {
+                background-color: @primaryBorderColor;
+            }
+            
+            .inner {
+                color: @primaryTextColor;
+                background-color: @primaryBackgroundColor;
+            }
+        }
+        
+        .pricing-table-wrap {
+            color: @primaryTextColor;
+            border-color: @primaryBackgroundColor;
+
+            .pricing-table {
+                .header, .body, .signup {
+                    background-color: @primaryBackgroundColor;
+                }
+
+                a {
+                    color: @primaryTextColor;
+                }
+            }
+        }
+
+        .double-border-box {
+            border-top-color: @primaryBorderColor;
+
+            &:before {
+                background-color: @primaryBorderColor;
+            }
+        }
+
+        .gmap {
+            border-color: @primaryBorderColor;
+        }
+
+        .gmap-wrapper {
+            border-color: @primaryBorderColor;
+
+            .gmap-title {
+                color: @primaryTextColor;
+
+                span {
+                    background-color: @primaryBorderColor;
+
+                    &:after {
+                        border-top-color: @primaryBorderColor;
+                    }
+                }
+            }
+        }
+
+        .btn {
+            background-color: @secondaryBackgroundColor;
+            color: @secondaryTextColor;
+        }
+
+        .double-border-box .double-border-heading {
+            border-bottom-color: @primaryBorderColor;
+            &:after {
+                background-color: @primaryBorderColor;
+            }
+        }
+
+        select, 
+        textarea, 
+        input[type="text"], 
+        input[type="password"], 
+        input[type="datetime"], 
+        input[type="datetime-local"], 
+        input[type="date"], 
+        input[type="month"], 
+        input[type="time"],
+        input[type="week"], 
+        input[type="number"], 
+        input[type="email"], 
+        input[type="url"], 
+        input[type="search"], 
+        input[type="tel"], 
+        input[type="color"], 
+        textarea {
+            color: @mainTextColor;
+            border-color: @primaryBorderColor;
+        }
+    }
+}
