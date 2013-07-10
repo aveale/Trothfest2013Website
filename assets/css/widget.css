@@ -770,7 +770,7 @@
 .gmap {
 	width: 100%;
 	border: 1px solid transparent;
-	height: 680px;
+	height: 400px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-o-box-sizing: border-box;
@@ -975,7 +975,7 @@
 
 .testimonial-wrap {
 	position: relative;
-	background-color: #e9e4d4;
+	background-color: #c75a33; /* #e9e4d4; */
 	box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -986,7 +986,7 @@
 	float: left;
 	margin: -20px 0 -20px -20px;
 	border-radius: 50%;
-	background-color: #e9e4d4;
+	background-color: #c75a33; /* #e9e4d4; */
 	box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.25);
 }
 

@@ -68,7 +68,7 @@
 
 	Parallax.prototype = {
 		defaults: {
-			xpos: '50%', // the background-x position
+			xpos: '70%', // the background-x position
 			speedFactor: 0.4, // the scrolling speed relative to the window
 			loadFirst: true, // load the background before displaying it, only available if data-background is specified
 			loadingText: 'loading...' // the loading text to display on the target element

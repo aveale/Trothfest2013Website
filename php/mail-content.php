@@ -8,12 +8,9 @@
 
 ?>
 
-Hello, <br><br>
-Someone has used the contact form on your website.<br>
-Here is the data we received:<br>
-Name: <?php echo $name ?><br>
-Email: <?php echo $email ?><br>
-Subject: <?php echo $subject ?><br>
-Message: <?php echo $message ?>
-<br><br>
-Thank you
+Message received via Vealebridge.com contact form:<br><br>
+  Name: <?php echo $name ?><br>
+  Email: <?php echo $email ?><br>
+  Subject: <?php echo $subject ?><br>
+  Message: <?php echo $message ?>
+<br>

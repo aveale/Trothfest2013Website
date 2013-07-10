@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'seasideresortnfregular';
+    src: url('seaside.eot');
+    src: url('seaside.eot?#iefix') format('embedded-opentype'),
+         url('seaside.woff') format('woff'),
+         url('seaside.ttf') format('truetype'),
+         url('seaside.svg#seasideresortnfregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

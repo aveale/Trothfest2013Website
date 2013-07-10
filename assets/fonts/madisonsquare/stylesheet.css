@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'madisonsquareincised';
+    src: url('madisonsquare.eot');
+    src: url('madisonsquare.eot?#iefix') format('embedded-opentype'),
+         url('madisonsquare.woff') format('woff'),
+         url('madisonsquare.ttf') format('truetype'),
+         url('madisonsquare.svg#madisonsquareincised') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

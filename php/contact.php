@@ -1,17 +1,17 @@
 <?php
 	$CONFIG = array(
 		/* Mail Options */
-		'mail_send_to'		=>	'maimairel@yahoo.com', 
+		'mail_send_to'		=>	'andrew@aveale.net', 
 		'mail_content_php'	=>	'mail-content.php', 
 		
 		/* Notification Messages */
 		'form_errors_msg'	=>	'The following errors were encountered: <ul><li>%s</li></ul>', 
 		'form_invalid_msg'	=>	'The form is invalid', 
-		'form_success_msg'	=>	'Thank you, your message has been sent :)', 
-		'mail_failed_msg'	=>	'An unknown error has occured', 
+		'form_success_msg'	=>	'Thank you, your message has been sent!', 
+		'mail_failed_msg'	=>	'An unknown error has occured!', 
 
 		/* Default Subject & Sender */
-		'subject_default'	=> 'Website Contact Form', 
+		'subject_default'	=> 'Vealebridge Contact Form', 
 		'mail_default'		=> 'user@anonymous.com'
 	);
 	

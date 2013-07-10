@@ -123,7 +123,11 @@ img {
 }
 
 blockquote {
-	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
+	/* font-family: 'Bebas Neue', Arial, Helvetica, sans-serif; */
+	font-family: 'Lobster', cursive; 
+	/* font-family: 'seasideresortnfregular', sans-serif; */
+	/* font-family: 'madisonsquareincised', sans-serif; */
+	
 }
 
 blockquote p {
@@ -512,6 +516,13 @@ blockquote small:before {
 	border-bottom: 1px dashed transparent;
 }
 
+.section-inner .blank-separator {
+	width: 100%;
+	padding-top: 24px;
+	margin-bottom: 24px;
+	border-bottom: 1px transparent;
+}
+
 .section-wrap.pat1 {
 	background-image: url('../img/pat/scratches.png');
 }
@@ -542,7 +553,27 @@ blockquote small:before {
 	margin: 0;
 }
 
+.section-story h3 {
+	font-size: 48px;
+	line-height: 0.9;
+	margin: 0;
+}
+
+.section-story h4 {
+	font-size: 30px;
+	line-height: 0.9;
+	margin: 0;
+}
+
 .mask-loaded .section-story h2 {
+	-webkit-mask: url(../img/grunge/mask.png);
+}
+
+.mask-loaded .section-story h3 {
+	-webkit-mask: url(../img/grunge/mask.png);
+}
+
+.mask-loaded .section-story h4 {
 	-webkit-mask: url(../img/grunge/mask.png);
 }
 
@@ -826,6 +857,22 @@ blockquote small:before {
 	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAQAAADYv8WvAAAADUlEQVR42mNgKGaAAAADogB0NMA4ZwAAAABJRU5ErkJggg==');
 }
 
+.subsection .subsection-wrap-narrow {
+	width: 100%;
+	height: 200px;
+	padding: 50px 0;
+	display: table;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAQAAADYv8WvAAAADUlEQVR42mNgKGaAAAADogB0NMA4ZwAAAABJRU5ErkJggg==');
+}
+
+.subsection .subsection-wrap-wide {
+	width: 100%;
+	height: 600px;
+	padding: 50px 0;
+	display: table;
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAQAAADYv8WvAAAADUlEQVR42mNgKGaAAAADogB0NMA4ZwAAAABJRU5ErkJggg==');
+}
+
 .subsection .subsection-inner {
 	display: table-cell;
 	vertical-align: middle;
@@ -873,6 +920,7 @@ blockquote small:before {
 ================================================== */
 
 .subsection blockquote, 
+.subsection .quote-small, 
 .subsection .quote-author {
 	display: block;
 	text-align: center;
@@ -884,9 +932,19 @@ blockquote small:before {
 	font-size: 36px;
 	line-height: 1;
 	position: relative;
+	/* text-transform: uppercase; */
+	margin: 0;
+	padding: 0;
+}
+
+.subsection .quote-small {
+	margin-top: 24px;
+	font-size: 42px;
+	position: relative;
 	text-transform: uppercase;
 	margin: 0;
 	padding: 0;
+	font-family: 'Bebas Neue', Arial, Helvetica, sans-serif;
 }
 
 .subsection .quote-author {
@@ -902,6 +960,7 @@ blockquote small:before {
 .subsection .quote-author:after {
 	content: '\00A0 \2014';
 }
+
 
 /* #Contact Page
 ================================================== */
@@ -991,7 +1050,8 @@ blockquote small:before {
 	color: #878787;
 	padding: 30px 0;
 	text-align: center;
-	font-size: 16px;
+	font-family: 'Lobster', cursive;
+	font-size: 20px;
 }
 
 
@@ -1450,6 +1510,8 @@ only screen and (                min-resolution: 2dppx)
 
 	.mask-loaded .page-header .page-header-title .title-text span, 
 	.mask-loaded .section-story h2, 
+	.mask-loaded .section-story h3, 
+	.mask-loaded .section-story h4, 
 	.mask-loaded .section-headline .headline-separator, 
 	.mask-loaded .section-subheadline .headline-text span, 
 	.mask-loaded .section-subheadline .headline-text-small, 
