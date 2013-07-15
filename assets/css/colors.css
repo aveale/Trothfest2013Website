@@ -648,7 +648,10 @@
   color: #eaeaea;
   background-color: #2e2e2e;
 }
-.section-wrap.bz-black a,
+.section-wrap.bz-black a {
+  color: #eaeaea;
+  text-decoration: underline;
+}
 .section-wrap.bz-black h1,
 .section-wrap.bz-black h2,
 .section-wrap.bz-black h3,
